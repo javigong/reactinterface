@@ -1,7 +1,7 @@
 import { BiCalendarPlus } from "react-icons/bi";
 import { useState } from "react";
 
-const AddAppointment = () => {
+const AddAppointment = ({ onSendAppointment, lastId }) => {
   const clearData = {
     ownerName: "",
     petName: "",
@@ -152,7 +152,7 @@ const AddAppointment = () => {
             <div className="flex justify-end">
               <button
                 type="submit"
-                onClick="formDataPublish"
+                onClick={formDataPublish}
                 className="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-400 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400"
               >
                 Submit
